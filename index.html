@@ -76,7 +76,7 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "Do I pay before delivery?", "acceptedAnswer": { "@type": "Answer", "text": "No. You pay the rider when the package reaches you. Nothing is taken from your account in advance." } },
-    { "@type": "Question", "name": "What's included in the box?", "acceptedAnswer": { "@type": "Answer", "text": "The device, three replaceable cartridges, the hard carry case and the charging cable — the complete kit." } },
+    { "@type": "Question", "name": "What's included in the box?", "acceptedAnswer": { "@type": "Answer", "text": "The device, three replaceable cartridges, the hard carry case and the charging cable — the complete kit. Three cartridges ship in every box, so two units arrive with six." } },
     { "@type": "Question", "name": "Can I buy replacement cartridges later?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — cartridges replace individually, so you keep the device." } },
     { "@type": "Question", "name": "Do you ship outside Lagos and Abuja?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we ship nationwide across Nigeria. Outside Lagos, delivery takes 3–5 days." } },
     { "@type": "Question", "name": "How do I reach you?", "acceptedAnswer": { "@type": "Answer", "text": "Use the WhatsApp or call links in the footer. We confirm every order before it ships." } }
@@ -386,8 +386,7 @@ footer strong{color:#fff;font-family:var(--font-display);font-weight:800;font-si
       <h1>Protection you can hold <em>and reload.</em></h1>
       <p class="lede">
         The Air Teaser arrives ready to carry — pistol-grip device, a hard carry case,
-        a charging cable and <strong>three replaceable cartridges</strong> already in the box.
-        No refill to hunt down before you can use it.
+        a charging cable and <strong>three replaceable cartridges</strong> in every box.
       </p>
       <div class="hero-cta">
         <a href="#order" class="btn btn-primary">Order Now — Pay on Delivery</a>
@@ -458,7 +457,7 @@ footer strong{color:#fff;font-family:var(--font-display);font-weight:800;font-si
       <div class="card reveal" style="background:var(--navy-soft);border-color:rgba(255,255,255,.10);color:#fff">
         <h3 style="color:#fff">Ready in the box</h3>
         <p style="color:rgba(255,255,255,.72);font-size:.94rem;margin:0">
-          Three cartridges means you're not stopped by an empty device on day one.
+          Three cartridges ship in every box, so you're stocked from day one.
         </p>
       </div>
       <div class="card reveal" style="background:var(--navy-soft);border-color:rgba(255,255,255,.10);color:#fff">
@@ -541,7 +540,7 @@ footer strong{color:#fff;font-family:var(--font-display);font-weight:800;font-si
       <p class="eyebrow">Spares</p>
       <h2>Cartridges run out. The device doesn't.</h2>
       <p class="lede">
-        Keep spares in the case so you're never carrying a device that's already spent.
+        Keep spares in the case so you're never caught without one.
       </p>
     </div>
     <div style="display:grid;gap:14px" id="refillList"><!-- rendered from CONFIG --></div>
@@ -645,7 +644,7 @@ footer strong{color:#fff;font-family:var(--font-display);font-weight:800;font-si
       </details>
       <details>
         <summary>What's included in the box?</summary>
-        <p>The device, three replaceable cartridges, the hard carry case and the charging cable — the complete kit.</p>
+        <p>The device, three replaceable cartridges, the hard carry case and the charging cable — the complete kit. Three cartridges ship in every box, so two units arrive with six.</p>
       </details>
       <details>
         <summary>Can I buy replacement cartridges later?</summary>
@@ -827,7 +826,7 @@ const CONFIG = {
 
     const items = $$(".pc-list li span:last-child", card);
     items[0].textContent = "Air Teaser device";
-    items[1].textContent = t.qty + (t.qty > 1 ? " cartridges" : " cartridge") + " included";
+    items[1].textContent = (t.qty * 3) + " cartridges included";
     items[2].textContent = "Hard case + charging cable";
     if (t.bonus) items[3].textContent = t.bonus;
 
@@ -848,7 +847,7 @@ const CONFIG = {
     const o = document.createElement("option");
     o.value = String(t.qty);
     o.textContent = t.label + " — " + money(t.price) +
-      (t.qty > 1 ? " (" + t.qty + " cartridges included)" : " (1 cartridge included)") +
+      " (3 cartridges per unit)" +
       (t.bonus ? " + " + t.bonus : "");
     sel.appendChild(o);
   });
