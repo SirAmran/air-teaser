@@ -1,4 +1,4 @@
-# Yoyos Devices — Air Teaser
+# Yoyos Devices, Air Teaser
 # Replace YOUR-DOMAIN with the live host once Netlify is connected,
 # then delete the "#" in front of the Sitemap line.
 
